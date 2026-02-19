@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import com.entity.User;
 import com.service.UserService;
 
@@ -14,6 +16,20 @@ public class UserController {
 		return msg;
 	}
 	
+	public List<User> getAllusers(){
+		
+		List<User> users = service.getAllusers();
+		
+		return users;
+	}
 	
+	public String Updateuser(User user) {
+		
+		return service.Updateuser(user);
+	}
+	
+	public String DeleteUser(int id) {
+		return service.DeleteUser(id);
+	}
 	
 }
